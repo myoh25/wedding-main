@@ -679,41 +679,46 @@ section + section{ margin-top:3rem; }   /* 필요하면 2rem~4rem 사이로 조�
 #scrollTopBtn {
   display: none; 
 }
-/* STYLE.CSS 파일의 제일 밑에 추가할 내용 */
+/* game-button */
 
 .game-button {
   display: block;
-  width: 100%;
-  max-width: 400px;
+  width: auto; /* 너비를 자동으로 조정하여 내용에 맞게 줄어들도록 변경 */
+  max-width: 280px; /* 버튼의 최대 너비를 더 작게 조절 (원하는 크기로 조절) */
   margin: 10px auto;
-  padding: 15px 20px;
+  padding: 12px 25px; /* 상하좌우 패딩을 줄여 버튼 크기 조절 */
   background-color: black;
   color: white;
-  font-family: Arial, sans-serif;
-  font-size: 24px;
-  font-weight: bold;
+  font-family: 'Black Han Sans', sans-serif; /* 폰트를 'Black Han Sans'로 변경 */
+  font-size: 20px; /* SUPER HYOJEONG 글자 크기를 더 작게 조절 */
+  font-weight: normal; /* Black Han Sans는 보통 굵기를 사용하므로 normal */
   text-align: center;
   text-decoration: none;
-  border-radius: 10px;
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s ease;
+  border-radius: 8px; /* 모서리 둥글기를 살짝 줄여 각진 느낌 유지 */
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* 그림자도 살짝 작게 */
+  transition: background-color 0.3s ease, transform 0.1s ease; /* 호버 시 미세한 애니메이션 추가 */
   box-sizing: border-box;
 }
 
 .game-button:hover {
   background-color: #333;
+  transform: translateY(-2px); /* 호버 시 살짝 위로 올라오는 효과 */
+}
+
+.game-button:active {
+  transform: translateY(0); /* 클릭 시 원위치로 돌아오는 효과 */
 }
 
 .game-button .hidden-game-text {
   color: yellow;
-  font-size: 16px;
+  font-size: 13px; /* HIDDEN GAME 글자 크기를 더 작게 조절 */
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 3px; /* 간격도 살짝 줄임 */
+  font-family: 'Black Han Sans', sans-serif; /* HIDDEN GAME 폰트도 Black Han Sans로 변경 */
 }
 
-/* 새로 추가된 섹션에 대한 스타일 (선택 사항) */
+/* 새로 추가된 섹션에 대한 스타일은 동일하게 유지 */
 #hiddenGameButtonSection {
   text-align: center;
-  padding: 30px 20px; /* 상하 여백 조절 (원하는 만큼 조절하세요) */
-  /* background-color: #f9f9f9; /* 섹션 배경색 (원하는 경우) */
+  padding: 30px 20px;
 }
