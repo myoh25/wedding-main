@@ -42,77 +42,6 @@
   </p>
 </section>
 
-<section id="d-day">
-  <h2>D‑DAY</h2>
-  <p id="dText">Loading…</p>
-  <div class="calendar-card">
-    <div class="cal-title">2025년 9월</div>
-    <div class="cal-grid">
-      <span class="cal-dow">일</span><span class="cal-dow">월</span><span class="cal-dow">화</span>
-      <span class="cal-dow">수</span><span class="cal-dow">목</span><span class="cal-dow">금</span><span class="cal-dow">토</span>
-      <span class="cal-blank"></span>
-      <span class="cal-day">1</span><span class="cal-day">2</span><span class="cal-day">3</span><span class="cal-day">4</span><span class="cal-day">5</span><span class="cal-day">6</span>
-      <span class="cal-day">7</span><span class="cal-day">8</span><span class="cal-day">9</span><span class="cal-day">10</span><span class="cal-day">11</span><span class="cal-day">12</span><span class="cal-day">13</span>
-      <span class="cal-day">14</span><span class="cal-day">15</span><span class="cal-day">16</span><span class="cal-day">17</span><span class="cal-day">18</span><span class="cal-day">19</span><span class="cal-day highlight">20</span>
-      <span class="cal-day">21</span><span class="cal-day">22</span><span class="cal-day">23</span><span class="cal-day">24</span><span class="cal-day">25</span><span class="cal-day">26</span><span class="cal-day">27</span>
-      <span class="cal-day">28</span><span class="cal-day">29</span><span class="cal-day">30</span>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2>사진첩</h2>
-  <div class="gallery-grid">
-    <img src="https://drive.google.com/uc?export=view&id=GALLERY_IMAGE_ID_1을_여기에_넣으세요" alt="갤러리 사진 1" onclick="openGallery(this, 0)">
-    <img src="https://drive.google.com/uc?export=view&id=GALLERY_IMAGE_ID_2을_여기에_넣으세요" alt="갤러리 사진 2" onclick="openGallery(this, 1)">
-    <img src="https://drive.google.com/uc?export=view&id=GALLERY_IMAGE_ID_3을_여기에_넣으세요" alt="갤러리 사진 3" onclick="openGallery(this, 2)">
-    <img src="https://drive.google.com/uc?export=view&id=GALLERY_IMAGE_ID_4을_여기에_넣으세요" alt="갤러리 사진 4" onclick="openGallery(this, 3)">
-    <img src="https://drive.google.com/uc?export=view&id=GALLERY_IMAGE_ID_5을_여기에_넣으세요" alt="갤러리 사진 5" onclick="openGallery(this, 4)">
-    <img src="https://drive.google.com/uc?export=view&id=GALLERY_IMAGE_ID_6을_여기에_넣으세요" alt="갤러리 사진 6" onclick="openGallery(this, 5)">
-    <img src="https://drive.google.com/uc?export=view&id=GALLERY_IMAGE_ID_7을_여기에_넣으세요" alt="갤러리 사진 7" onclick="openGallery(this, 6)">
-    <img src="https://drive.google.com/uc?export=view&id=GALLERY_IMAGE_ID_8을_여기에_넣으세요" alt="갤러리 사진 8" onclick="openGallery(this, 7)">
-  </div>
-</section>
-
-<div id="lightbox" class="lightbox-overlay">
-  <div class="lightbox-container">
-    <span class="close-btn" onclick="closeGallery()">×</span>
-    <img id="lightbox-img" class="lightbox-image">
-    <a class="prev-btn" onclick="changeImage(-1, event)">❮</a>
-    <a class="next-btn" onclick="changeImage(1, event)">❯</a>
-  </div>
-</div>
-
-<section>
-  <h2>오시는 길</h2>
-  <div id="daumRoughmapContainer1753199064120" class="root_daum_roughmap root_daum_roughmap_landing map-rough"></div>
-  <div class="map-btn-wrap">
-    <a href="https://map.kakao.com/link/map/528031607" target="_blank" class="map-btn">카카오맵</a>
-    <a href="https://naver.me/5T4W6EiX" target="_blank" class="map-btn">네이버지도</a>
-  </div>
-</section>
-
-<section id="puzzle">
-  <p class="puzzle-subtitle">SPECIAL GAME</p>
-  <h2>💞 사랑의 퍼즐을 맞춰보세요</h2>
-  <p class="puzzle-description">퍼즐을 맞춰 민열이와 효정이가 만나게 해주세요!</p>
-  <div class="puzzle-container">
-    <canvas id="puzzleCanvas"></canvas>
-    <button onclick="shufflePuzzle()" class="shuffle-btn">다시 섞기</button>
-    <a href="https://myoh25.github.io/hidden_game/" target="_blank" class="special-event-btn">
-      <span class="btn-line-1">💌 퍼즐 고수를 위한 초대장 ✨</span>
-      <span class="btn-line-2">(방명록도 남길 수 있어요! ✍️)</span>
-    </a>
-    <p id="message"></p>
-  </div>
-</section>
-
-<div id="rewardWrap" class="reward">
-  <img src="https://cdn.jsdelivr.net/gh/myoh25/1/puzzle-special03.png" alt="특전 사진" class="reward__img">
-  <div class="wave wave--back"></div>
-  <div class="wave wave--front"></div>
-</div>
-
 <section id="account">
   <h2>마음 전하실 곳</h2>
   <div class="account-group">
@@ -164,6 +93,80 @@
     </div>
   </div>
 </section>
+
+<section>
+  <h2>오시는 길</h2>
+  <div id="daumRoughmapContainer1753199064120" class="root_daum_roughmap root_daum_roughmap_landing map-rough"></div>
+  <div class="map-btn-wrap">
+    <a href="https://map.kakao.com/link/map/528031607" target="_blank" class="map-btn">카카오맵</a>
+    <a href="https://naver.me/5T4W6EiX" target="_blank" class="map-btn">네이버지도</a>
+  </div>
+</section>
+
+<section>
+  <h2>사진첩</h2>
+  <div class="gallery-grid">
+    <img src="https://drive.google.com/uc?export=view&id=GALLERY_IMAGE_ID_1을_여기에_넣으세요" alt="갤러리 사진 1" onclick="openGallery(this, 0)">
+    <img src="https://drive.google.com/uc?export=view&id=GALLERY_IMAGE_ID_2을_여기에_넣으세요" alt="갤러리 사진 2" onclick="openGallery(this, 1)">
+    <img src="https://drive.google.com/uc?export=view&id=GALLERY_IMAGE_ID_3을_여기에_넣으세요" alt="갤러리 사진 3" onclick="openGallery(this, 2)">
+    <img src="https://drive.google.com/uc?export=view&id=GALLERY_IMAGE_ID_4을_여기에_넣으세요" alt="갤러리 사진 4" onclick="openGallery(this, 3)">
+    <img src="https://drive.google.com/uc?export=view&id=GALLERY_IMAGE_ID_5을_여기에_넣으세요" alt="갤러리 사진 5" onclick="openGallery(this, 4)">
+    <img src="https://drive.google.com/uc?export=view&id=GALLERY_IMAGE_ID_6을_여기에_넣으세요" alt="갤러리 사진 6" onclick="openGallery(this, 5)">
+    <img src="https://drive.google.com/uc?export=view&id=GALLERY_IMAGE_ID_7을_여기에_넣으세요" alt="갤러리 사진 7" onclick="openGallery(this, 6)">
+    <img src="https://drive.google.com/uc?export=view&id=GALLERY_IMAGE_ID_8을_여기에_넣으세요" alt="갤러리 사진 8" onclick="openGallery(this, 7)">
+  </div>
+</section>
+
+<div id="lightbox" class="lightbox-overlay">
+  <div class="lightbox-container">
+    <span class="close-btn" onclick="closeGallery()">×</span>
+    <img id="lightbox-img" class="lightbox-image">
+    <a class="prev-btn" onclick="changeImage(-1, event)">❮</a>
+    <a class="next-btn" onclick="changeImage(1, event)">❯</a>
+  </div>
+</div>
+
+<section id="d-day">
+  <h2>D‑DAY</h2>
+  <p id="dText">Loading…</p>
+  <div class="calendar-card">
+    <div class="cal-title">2025년 9월</div>
+    <div class="cal-grid">
+      <span class="cal-dow">일</span><span class="cal-dow">월</span><span class="cal-dow">화</span>
+      <span class="cal-dow">수</span><span class="cal-dow">목</span><span class="cal-dow">금</span><span class="cal-dow">토</span>
+      <span class="cal-blank"></span>
+      <span class="cal-day">1</span><span class="cal-day">2</span><span class="cal-day">3</span><span class="cal-day">4</span><span class="cal-day">5</span><span class="cal-day">6</span>
+      <span class="cal-day">7</span><span class="cal-day">8</span><span class="cal-day">9</span><span class="cal-day">10</span><span class="cal-day">11</span><span class="cal-day">12</span><span class="cal-day">13</span>
+      <span class="cal-day">14</span><span class="cal-day">15</span><span class="cal-day">16</span><span class="cal-day">17</span><span class="cal-day">18</span><span class="cal-day">19</span><span class="cal-day highlight">20</span>
+      <span class="cal-day">21</span><span class="cal-day">22</span><span class="cal-day">23</span><span class="cal-day">24</span><span class="cal-day">25</span><span class="cal-day">26</span><span class="cal-day">27</span>
+      <span class="cal-day">28</span><span class="cal-day">29</span><span class="cal-day">30</span>
+    </div>
+  </div>
+</section>
+
+<section id="puzzle">
+  <p class="puzzle-subtitle">SPECIAL GAME</p>
+  <h2>💞 사랑의 퍼즐을 맞춰보세요</h2>
+  <p class="puzzle-description">퍼즐을 맞춰 민열이와 효정이가 만나게 해주세요!</p>
+  <div class="puzzle-container">
+    <canvas id="puzzleCanvas"></canvas>
+    <button onclick="shufflePuzzle()" class="shuffle-btn">다시 섞기</button>
+    
+    <a href="https://myoh25.github.io/hidden_game/" target="_blank" class="special-event-btn" style="text-align: center;">
+      <span class="btn-line-1">💌 퍼즐 고수를 위한 초대장 ✨</span>
+      <span class="btn-line-2">(방명록도 남길 수 있어요! ✍️)</span>
+    </a>
+
+    <p id="message"></p>
+  </div>
+</section>
+
+<div id="rewardWrap" class="reward">
+  <img src="https://cdn.jsdelivr.net/gh/myoh25/1/puzzle-special03.png" alt="특전 사진" class="reward__img">
+  <div class="wave wave--back"></div>
+  <div class="wave wave--front"></div>
+</div>
+
 
 <audio id="bgm" src="https://cdn.jsdelivr.net/gh/myoh25/1/bgm.mp3" preload="auto" loop></audio>
 
