@@ -1,4 +1,3 @@
-<style>
 /* ------------ RESET & BASE ------------ */
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 body{
@@ -641,5 +640,3 @@ section + section{ margin-top:3rem; }   /* 필요하면 2rem~4rem 사이로 조�
   color: #333;
   min-height: 1.2em; /* 메시지 영역 높이 확보 */
 }
-
-</style>
