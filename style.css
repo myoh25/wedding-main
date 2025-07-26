@@ -1,0 +1,645 @@
+<style>
+/* ------------ RESET & BASE ------------ */
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+body{
+  font-family:'Gowun Batang',serif;line-height:1.6;color:#333;
+  background:#f8f6f2;max-width:480px;margin:0 auto;
+}
+h1,h2,h3{font-weight:700;text-align:center}
+h1{font-size:2.2rem;color:#ffffff}
+h2{font-size:1.2rem;margin:1.8rem 0 .8rem;color:#9E7A55}
+h3{font-size:1rem;margin:.7rem 0}
+/* 버튼 계열이 부모 글꼴(=고운바탕체)을 그대로 따르도록 */
+button,
+.icon-btn,
+.copy-btn {
+  font-family: inherit !important;
+}
+/* ------------ HERO (사진 + 텍스트) ------------ */
+#hero{
+  max-width:480px;margin:0 auto;text-align:center;
+  padding:40px 0 48px;background:#fff;
+}
+.hero-photo{
+  width:92%;max-width:430px;height:auto;display:block;margin:0 auto;
+  border-radius:4px;object-fit:cover;box-shadow:0 2px 8px rgba(0,0,0,.12);
+}
+.hero-info{margin-top:36px;color:#2f2f2f;font-family:'Gowun Batang',serif;}
+.hero-names{
+  font-size:2.2rem;font-weight:700;letter-spacing:4px;
+  display:flex;justify-content:center;align-items:center;color:#9E7A55 !important;
+}
+.hero-names .bar{margin:0 12px;font-size:1.9rem;color:#9E7A55;opacity:.65}
+.hero-date{margin-top:24px;font-size:1.1rem;letter-spacing:1px}
+.hero-place{margin-top:8px;font-size:1.1rem;line-height:1.4}
+/* 초소형 화면(≤330px) 대응 */
+@media(max-width:330px){
+  .hero-photo{width:96%}
+  .hero-names{font-size:1.9rem}
+  .hero-names .bar{margin:0 8px}
+}
+
+/* ------------  INVITATION (모시는 글)  ------------ */
+
+/* 1) 카드 박스 */
+.invitation{
+  background:#fff;
+  border-radius:12px;
+  padding:2.2rem 1.6rem;
+  margin:2rem 5%;
+  box-shadow:0 2px 6px rgba(0,0,0,.05);
+  text-align:center;
+}
+
+/* 2) 제목 */
+.invitation h2{
+  font-size:1.4rem;
+  font-weight:700;
+  margin-bottom:1.4rem;
+  color:#9E7A55;
+}
+
+/* 3‑A) 가족 소개 · 초대 문구(폰트 ↑) */
+.invitation .family,
+.invitation .msg{
+  font-size:clamp(1.05rem, 4vw, 1.2rem);
+  line-height:1.6;
+  margin:.25rem 0 1.2rem;
+}
+
+/* 3‑B) [NEW] 초대 문구를 ‘두 줄 고정’으로 표시
+         ─ HTML에서 <p class="msg"><span>…</span><span>…</span></p> */
+.invitation .msg span{
+  display:block;                       /* 한 문장 = 한 줄 */
+  white-space:nowrap;                  /* 자동 줄바꿈 금지 */
+  font-size:clamp(.95rem, 3.8vw, 1.1rem); /* 좁은 화면에선 살짝 축소 */
+  line-height:1.55;
+  letter-spacing:-0.015em;             /* 약간 조밀하게 */
+}
+
+/* 4) (선택) 데스크톱에서 카드 폭을 조금 좁히기 */
+@media (min-width:768px){
+  .invitation{ max-width:560px; margin:2.5rem auto; }
+}
+
+/* 4) 본문 ② (인용·편지 문구) ─ 고운바탕 + 인용구 스타일 */
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap');
+
+.invitation .note{
+  font-family:'Gowun Batang','Batang','serif';
+  font-size:clamp(.85rem, 3.3vw, .95rem); /* 위 본문보다 살짝 작게 */
+  line-height:1.55;                       /* 줄간격 좁힘 */
+  letter-spacing:-0.015em;                /* 장평 살짝 조밀하게 */
+  margin:1.6rem auto 0;
+  max-width:80%;                          /* 카드 안에서 폭을 줄여 인용 느낌 */
+  font-style:italic;                      /* 편지·메모 감성 */
+  color:#444;
+}
+
+/* 5) 데스크톱에서 카드 폭 조금 좁히기 (선택) */
+@media (min-width:768px){
+  .invitation{ max-width:560px; margin:2.5rem auto; }
+}
+
+/* ------------ GALLERY ------------ */
+.gallery-grid{
+  display:grid;grid-template-columns:repeat(2,1fr);
+  gap:6px;padding:0 5% 12px
+}
+.gallery-grid img{
+  width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:6px;cursor:pointer
+}
+
+/* ------------ ACCOUNT ------------ */
+.account-group{
+  background:#fff;margin:1.4rem 5%;padding:1rem;border-radius:8px
+}
+.account-item{
+  display:flex;justify-content:space-between;align-items:flex-start;
+  padding:.5rem 0;border-bottom:1px solid #eee
+}
+.account-item:last-child{border:none}
+.btn-wrap{display:flex;gap:6px}
+.icon-btn,.map-btn,.call-btn{
+  border:none;border-radius:24px;text-decoration:none;cursor:pointer;
+  font-size:.9rem;padding:.5rem .9rem;display:inline-block
+}
+.icon-btn{background:#9E7A55;color:#fff}
+.phone{background:#666}
+.copy-btn{background:#9E7A55}
+
+/* ▶ 새로 추가된 이름·계좌 전용 규칙 */
+.acc-info{
+  display:flex!important;
+  flex-direction:column!important;      /* 기본 2줄 */
+  gap:2px;
+  font-size:1rem;
+}
+.acc-no{
+  font-size:.9em;
+  color:#666;
+}
+@media (min-width:600px){
+  .acc-info{
+    flex-direction:row;
+    align-items:baseline;
+    gap:8px;
+  }
+  .acc-no{font-size:1em;}
+}
+/* ───── 어카운트 카드: 세 줄 레이아웃 강제 ───── */
+.account-item{
+  /* flex-row → flex-col */
+  flex-direction:column;        /* 1) 이름·계좌  2) 버튼 래퍼 */
+  align-items:stretch;
+  gap:8px;                      /* 줄 간 여백 */
+}
+
+/* 버튼 래퍼가 카드 폭 100%를 차지하도록 */
+.btn-wrap{
+  width:100%;
+}
+
+/* 두 버튼을 50%‑50% 균등 분배 */
+.icon-btn{
+  flex:1 1 0;                   /* 같은 너비로 커짐 */
+  text-align:center;
+  line-height:40px;             /* 버튼 높이 통일 (원하면 제거) */
+}
+
+/* 화면이 충분히 넓어지면 기존 가로 배치로 회귀 (선택) */
+@media (min-width:600px){
+  .account-item{
+    flex-direction:row;
+    align-items:flex-start;
+  }
+  .btn-wrap{width:auto;}
+  .icon-btn{flex:initial; line-height:initial;}
+}
+
+/* ------------ MAP ------------ */
+.map-image{width:90%;display:block;margin:0 auto;border-radius:8px}
+.map-btn-wrap{display:flex;justify-content:center;gap:10px;margin-top:.7rem}
+.map-btn{background:#9E7A55;color:#fff}
+
+/* ------------ CALL ------------ */
+.call-wrap{display:flex;flex-direction:column;gap:.7rem;margin:0 5%}
+.call-btn{background:#fff;border:1px solid #9E7A55;color:#9E7A55}
+
+/* ---------- BGM 버튼 ---------- */
+.bgm-btn{
+  position:fixed;right:16px;bottom:16px;z-index:1000;
+  padding:.55rem 1.1rem;border:none;border-radius:24px;
+  background:#9E7A55;color:#fff;
+  font-family:'Gowun Batang',serif;font-size:.9rem;
+  box-shadow:0 2px 6px rgba(0,0,0,.25);
+}
+
+/* ------------ D‑DAY ------------ */
+#d-day{text-align:center;margin:2.2rem 0;}
+#d-day h2{font-size:1.3rem;color:#9E7A55;margin-bottom:.6rem}
+#dText{font-size:1.05rem;margin-bottom:1rem;color:#333}
+
+/* ------------ MODERN CALENDAR CARD ------------ */
+.calendar-card{
+  width:90%;max-width:420px;margin:0 auto;background:#fff;
+  border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.08);
+  padding:1.1rem 1.2rem 1.4rem;font-family:'Gowun Batang',serif;color:#444;
+}
+.cal-title{
+  text-align:center;font-weight:700;font-size:1.05rem;letter-spacing:.5px;
+  margin-bottom:.8rem;color:#9E7A55;
+}
+.cal-grid{
+  display:grid;grid-template-columns:repeat(7,1fr);
+  gap:.35rem;text-align:center;
+}
+.cal-dow{font-size:.75rem;font-weight:700;color:#777}
+.cal-day,.cal-blank{padding:.55rem 0;font-size:.9rem}
+.cal-blank{background:transparent}
+.cal-day{background:#fafafa;border-radius:6px}
+.cal-day.highlight{background:#9E7A55;color:#fff;font-weight:700}
+/* 초소형 화면 대응 */
+@media(max-width:340px){
+  .calendar-card{padding:.9rem 1rem}
+  .cal-title{font-size:.95rem}
+  .cal-day{padding:.45rem 0;font-size:.8rem}
+}
+/* ------------- LOCATION (카카오 약도 – 중앙 정렬) ------------- */
+.root_daum_roughmap{
+  width:92%        !important;   /* 모바일 기준 Hero 이미지와 동일 폭 */
+  max-width:430px  !important;   /* 선택 사항: PC 화면에서 최대 폭 */
+  margin:0 auto    !important;   /* 수평 가운데 */
+  display:block    !important;   /* inline-block → block */
+  border-radius:8px;
+  overflow:hidden;
+  box-shadow:0 2px 8px rgba(0,0,0,.12);
+}
+
+/* 약도 아래 버튼(카카오·네이버)과 간격이 너무 붙어 있으면: */
+.map-btn-wrap{ margin-top:.9rem }
+
+/* ------------ FOOTER ------------ */
+footer{margin:2rem 0;text-align:center;font-size:.75rem;color:#666}
+
+/* ----- 라이트박스 갤러리 스타일 (최종 수정) ----- */
+
+/* 라이트박스 배경 (평소에는 숨겨져 있음) */
+.lightbox-overlay {
+  display: none; /* 이 부분이 핵심! 평소에는 무조건 숨김 */
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  /* Flexbox를 이용해 내용물을 화면 정중앙에 배치 */
+  align-items: center;
+  justify-content: center;
+}
+
+/* JS로 visible 클래스가 추가되면 보이도록 변경 */
+.lightbox-overlay.visible {
+  display: flex;
+}
+
+/* 라이트박스 팝업창 (흰색, 모서리 둥글게) */
+.lightbox-container {
+  position: relative;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* 라이트박스 내용물 (이미지) */
+.lightbox-image {
+  display: block;
+  width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+}
+
+/* 닫기 버튼 (컨테이너 우측 상단) */
+.close-btn {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 30px;
+  height: 30px;
+  line-height: 28px;
+  text-align: center;
+  background: #333;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid #fff;
+}
+
+/* 이전/다음 버튼 */
+.prev-btn, .next-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  padding: 12px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+  user-select: none;
+}
+
+.next-btn {
+  right: 20px;
+  border-radius: 3px;
+}
+
+.prev-btn {
+  left: 20px;
+  border-radius: 3px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/* ---------- FAB 위치 & 메인 버튼 ---------- */
+.fab{
+  position:fixed;right:16px;bottom:16px;z-index:900;
+}
+.fab-main{
+  width:56px;height:56px;border-radius:50%;border:none;
+  background:#96704a;color:#fff;font-size:1.0rem;
+  box-shadow:0 4px 10px rgba(0,0,0,.25);cursor:pointer;
+}
+/* ---------- 액션 버튼 ---------- */
+.fab-action{
+  position:absolute;right:0;bottom:0;
+  width:48px;height:48px;border-radius:50%;border:none;
+  background:#cea982;color:#fff;font-size:.8rem;
+  opacity:0;transform:translateX(100%) scale(.5);
+  transition:transform .25s ease,opacity .25s ease;
+  pointer-events:none;   /* 접힌 상태에서 클릭 차단 */
+}
+
+/* ---------- 펼쳐진 상태(.open) ---------- */
+.fab.open .fab-action{
+  pointer-events:auto;opacity:1;transform:translateX(0) scale(1);
+}
+.fab.open #saveCard  {transform:translate(-60px,-60px);} /* ↖ */
+.fab.open #shareUrl  {transform:translate(-80px,-10px);} /* ← */
+.fab.open #bgmToggle {transform:translate(-10px,-80px);} /* ↑ */
+/* 카드 내부 텍스트 배치 ‑ 1줄 → 2줄 */
+.acc-name,
+.acc-no{
+  display:block;      /* 줄바꿈 강제 */
+}
+.acc-no{
+  font-weight:700;    /* 계좌번호 볼드체 */
+}
+/* ── 특전 사진 컨테이너 ─────────────────────────── */
+.reward{
+  position:fixed; inset:0; margin:auto;
+  width:260px; height:260px;
+  border-radius:50%; overflow:hidden;
+  opacity:0; transform:scale(.8);
+  visibility:hidden;          /* ★ 보이지 않을 때 아예 ‘숨김’ */
+  pointer-events:none;        /* ★ 이벤트도 차단 */
+  transition:opacity .6s ease, transform .6s ease;
+  z-index:999;                /* 퍼즐보다 앞, 다른 UI보다 뒤면 조정 */
+}
+.reward.show{
+  opacity:1; transform:scale(1);
+  visibility:visible;         /* ★ 나타날 때 보이도록 */
+  pointer-events:auto;        /* ★ 클릭으로 닫을 수 있게 허용 */
+}
+.reward__img{
+  width:100%; height:100%;
+  object-fit:cover;
+  object-position:center;
+  border-radius:50%;
+}
+/* ── 공통 파도 레이어 ──────────────────────────── */
+.wave{
+  position:absolute; left:0; bottom:0;
+  width:200%; height:60%;          /* 좌우 2배 → 슬라이드 여유 */
+  background-size:50% 100%;        /* SVG 한 모듈 가로폭 = 전체의 50% */
+  background-repeat:repeat-x;
+  /* 투명도·색상은 SVG 안에 포함됨 */
+  animation:waveSlide 6s linear infinite;
+  pointer-events:none;             /* 클릭 막음 */
+}
+/* 뒷파도: 느리고 연함 */
+.wave--back{
+  z-index:2;
+  opacity:.5;
+  animation-duration:8s;
+}
+/* 앞파도: 빠르고 진함 */
+.wave--front{
+  z-index:3;
+  opacity:.8;
+  animation-duration:4s;
+  animation-direction:reverse;     /* 서로 반대 방향 흐름 */
+}
+
+/* ── X축 이동만 하는 슬라이드 ─────────────────── */
+@keyframes waveSlide{
+  from{ transform:translateX(0); }
+  to  { transform:translateX(-50%); }
+}
+.wave{
+  /* … 위 공통 속성들 … */
+  background-image:
+    url('data:image/svg+xml;utf8,\
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 60" preserveAspectRatio="none">\
+ <path d="M0 30 Q30 0 60 30 T120 30 V60 H0 Z" fill="white"/>\
+</svg>');
+}
+/* ACCOUNT: 모바일·데스크톱 공통 — 정보 위에 버튼 아래 고정 */
+#account .account-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: .8rem 1rem;
+}
+
+#account .btn-wrap {
+  display: flex;
+  gap: 6px;
+  width: 100%;
+}
+
+#account .icon-btn {
+  flex: 1;
+  text-align: center;
+}
+/* =====================================================
+   어카운트 카드 – 버튼 높이 ↓, 글자 크기 ↑, 반응형 조절
+===================================================== */
+
+/* 1) 이름·계좌 글꼴 크기 (clamp = 화면폭에 따라 자동 조절) */
+.acc-name{ font-size:clamp(1.05rem, 4vw, 1.3rem); }
+.acc-no  { font-size:clamp(.95rem , 3.5vw,1.15rem); }
+
+/* 2) 버튼 높이·글꼴 ↓ */
+.icon-btn{
+  flex:1 1 0;                 /* 50% 폭 유지 */
+  font-size:clamp(.8rem, 2.8vw, .9rem);
+  line-height:34px;           /* 높이 = line‑height (기존 40px → 34px) */
+  padding:0;                  /* 상하 padding 제거해 높이 고정 */
+}
+
+/* 3) 폭이 넓은 화면(≥600px)에서 약간 키워줌 */
+@media (min-width:600px){
+  .icon-btn{
+    line-height:38px;         /* 조금 더 높게 */
+    font-size:.95rem;
+  }
+}
+/* ==========================================================
+   오시는 길 – 지도 버튼 : 폭·높이·글꼴 통일 (어카운트 버튼과 동일)
+========================================================== */
+
+/* 지도 버튼 래퍼를 카드 안쪽으로 ‘살짝’ 좁혀서
+   실제 버튼 폭이 어카운트 카드와 같아지도록 */
+.map-btn-wrap{
+  display:flex;
+  gap:6px;                   /* 어카운트와 동일 간격 */
+  max-width:280px;           /* ≒ 어카운트 카드 폭 */
+  margin:1rem auto 0;        /* 가운데 정렬 */
+}
+
+/* 두 버튼 공통 – 같은 폭(50%) · 높이 · 글꼴 · 볼드 */
+.map-btn{
+  flex:1 1 0;                /* 50 % · 50 % */
+  text-align:center;
+  line-height:36px;          /* 높이 ↓ (account = 34~38px) */
+  padding:0;
+  border:none; border-radius:24px;
+  font-size:1rem;            /* 글씨 ↑ */
+  font-weight:600;           /* 볼드 */
+  cursor:pointer;
+  transition:filter .2s;
+}
+
+/* 브랜드 색상 유지 */
+.map-btn:nth-child(1){ background:#FEE500; color:#000; }
+.map-btn:nth-child(2){ background:#03C75A; color:#fff; }
+
+/* 호버 효과 동일 */
+.map-btn:hover{ filter:brightness(.92); }
+
+/* 태블릿·PC(≥600px)에서 살짝 키우기 (선택) */
+@media (min-width:600px){
+  .map-btn{ line-height:40px; font-size:1.05rem; }
+}
+/* ───────── Section 공통 제목 스타일 (Puzzle 제외, 글자 확대) ───────── */
+section:not(#puzzle) > h2{
+  position:relative;
+  display:block;
+  text-align:center;
+  margin:0 0 1.6rem;
+  font-weight:700;
+
+  /* 제목 크기 : 본문보다 확실히 크게 (모바일~PC 자동 조절) */
+  font-size:clamp(1.35rem, 4.5vw, 1.7rem);
+}
+/* ============= ▼ 히든 게임 버튼 스타일 ▼ ================ */
+section:not(#puzzle) > h2::after{
+  content:'';
+  position:absolute;
+  left:0; right:0;
+  bottom:-0.5rem;
+  height:1px;
+  background:currentColor;
+  opacity:.35;
+}
+.special-event-wrapper {
+    background-color: #fffafb; 
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid #fce4e8; /* 구분선 추가 */
+}
+.special-event-btn {
+    display: inline-block;
+    text-decoration: none;
+    background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+    color: white;
+    padding: 20px 35px;
+    border-radius: 50px;
+    box-shadow: 0 6px 12px rgba(166, 193, 238, 0.3);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    font-family: 'Gowun Batang', serif;
+    cursor: pointer;
+    border: none;
+}
+.special-event-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(166, 193, 238, 0.4);
+}
+.btn-line-1 {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 6px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+.btn-line-2 {
+    display: block;
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+/* ── 인접한 섹션 사이 여백(로케이션‑갤러리 간격 포함) ── */
+section + section{ margin-top:3rem; }   /* 필요하면 2rem~4rem 사이로 조절 */
+/* ============= ▼ 퍼즐 섹션 모바일 & 웹 최적화 ▼ ============== */
+#puzzle {
+  /* 다른 섹션과의 넓은 간격을 줄입니다. */
+  margin-top: 1.5rem !important; 
+  /* 내부 상하 패딩도 적절하게 조절합니다. */
+  padding: 30px 20px !important;
+  background-color: #fff8f5 !important; /* 배경색을 CSS로 관리합니다. */
+}
+
+#puzzle h2,
+#puzzle p {
+  /* 단어가 중간에 잘리는 현상을 방지합니다. (한글에 중요) */
+  word-break: keep-all;
+  text-align: center; /* 모든 텍스트를 중앙 정렬합니다. */
+}
+
+/* "SPECIAL GAME" 소제목 */
+.puzzle-subtitle {
+  color: #cc6699;
+  font-size: 0.9em;
+  letter-spacing: 2px;
+  margin: 0 0 8px;
+}
+
+/* "사랑의 퍼즐을 맞춰보세요" 제목 */
+#puzzle h2 {
+  color: #cc6699;
+  /* 화면 크기에 따라 폰트 크기를 자동으로 조절합니다. */
+  font-size: clamp(1.3rem, 5.5vw, 1.6em) !important;
+  margin-bottom: 10px !important;
+}
+
+/* "퍼즐을 맞춰..." 설명 문구 */
+.puzzle-description {
+  font-size: clamp(0.9rem, 3.8vw, 1em) !important;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* 캔버스, 버튼 등을 감싸는 컨테이너 */
+.puzzle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* 요소들 사이의 간격을 15px로 일정하게 조절합니다. */
+  margin-top: 20px;
+}
+
+/* 퍼즐 캔버스 */
+#puzzleCanvas {
+  border: 3px solid #ccc;
+  background: #fff;
+  width: 100%; /* 너비를 100%로 설정하여 부모 요소에 맞춤 */
+  max-width: 300px; /* 최대 너비를 지정하여 너무 커지지 않게 함 */
+  height: auto;
+  aspect-ratio: 1 / 1;
+}
+
+/* '다시 섞기' 버튼 */
+.shuffle-btn {
+  margin: 0 !important;
+  background-color: #cc6699;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+/* '초대장' 버튼 */
+#puzzle .special-event-btn {
+  margin: 5px 0 0 0 !important; /* 위쪽 여백을 살짝 추가하여 구분감 부여 */
+}
+
+/* 퍼즐 완료 메시지 */
+#message {
+  margin-top: 0 !important; /* 불필요한 상단 여백 제거 */
+  font-size: 1.1em;
+  color: #333;
+  min-height: 1.2em; /* 메시지 영역 높이 확보 */
+}
+
+</style>
