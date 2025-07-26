@@ -679,3 +679,41 @@ section + section{ margin-top:3rem; }   /* 필요하면 2rem~4rem 사이로 조�
 #scrollTopBtn {
   display: none; 
 }
+/* STYLE.CSS 파일의 제일 밑에 추가할 내용 */
+
+.game-button {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 10px auto;
+  padding: 15px 20px;
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.game-button:hover {
+  background-color: #333;
+}
+
+.game-button .hidden-game-text {
+  color: yellow;
+  font-size: 16px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* 새로 추가된 섹션에 대한 스타일 (선택 사항) */
+#hiddenGameButtonSection {
+  text-align: center;
+  padding: 30px 20px; /* 상하 여백 조절 (원하는 만큼 조절하세요) */
+  /* background-color: #f9f9f9; /* 섹션 배경색 (원하는 경우) */
+}
