@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <head>
-  <base target="_top">
   <meta charset="utf-8">
+  <title>민열♥효정 결혼합니다</title>
+  
   <meta property="og:type"        content="website">
   <meta property="og:title"       content="민열♥효정 결혼합니다">
   <meta property="og:description" content="2025년 9월 20일 토요일 오후 1시, 안동리첼호텔웨딩홀">
@@ -11,30 +11,29 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height"content="630">
   <meta name="twitter:card"       content="summary_large_image">
-  <meta property="og:url"         content="https://script.google.com/macros/s/AKfycbxwToc8MTiYn9Pf4PoyvCN9dF2A_w1t6CE2eZy5n41LZeCgiorW5MABHGAyhwjT80g9/exec"> 
+  <meta property="og:url"         content="https://<내-깃허브-ID>.github.io/<저장소-이름>/"> 
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
 
-  <?!= include('style'); ?>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<!--------------- HERO --------------->
 <header id="hero">
-  <!-- 웨딩 사진 : 필요에 따라 w800 등 파라미터로 리사이즈 -->
   <img class="hero-photo"
-       src="https://lh3.googleusercontent.com/d/18TR0u8ug68KAzn3tzkCSVpsIOEFFaVXr=w800"
+       src="images/wedding-photo.jpg" 
        alt="신랑·신부 사진">
 
-  <!-- 텍스트 정보 -->
   <div class="hero-info">
-    <h1 class="hero-names">오민열&nbsp;<span class="bar">|</span>&nbsp;김효정</h1>
+    <h1 class="hero-names">오민열 <span class="bar">|</span> 김효정</h1>
     <p class="hero-date"><strong>2025.09.20. 토요일 오후 1시</strong></p>
     <p class="hero-place"><strong>안동리첼호텔웨딩홀 3F 크리스탈홀</strong></p>
   </div>
 </header>
 
-<!--------------- INVITATION --------------->
 <section class="invitation">
   <h2>모시는 글</h2>
 
@@ -55,121 +54,36 @@
   </p>
 </section>
 
+<section id="d-day">
+  <h2>D‑DAY</h2>
+  <p id="dText">Loading…</p>
 
-<!--------------- ACCOUNT & CONTACT --------------->
-<section id="account">
-  <h2>마음 전하실 곳</h2>
-
-  <!-- ─── 신랑측 ───────────────────────────────────── -->
-  <div class="account-group">
-    <h3>🤵‍♂️ 신랑측</h3>
-
-    <div class="account-item" data-acc="국민 607-24-0021-571 오상봉">
-      <div class="acc-info">
-        <span class="acc-name">혼주 오상봉</span>
-        <span class="acc-no">국민 607‑24‑0021‑571</span>
-      </div>
-      <div class="btn-wrap">
-        <a class="icon-btn phone" href="tel:01085969207" aria-label="오상봉 혼주에게 전화">전화하기</a>
-        <button class="icon-btn copy-btn"
-                data-acc="국민 607-24-0021-571 오상봉">계좌복사</button>
-      </div>
-    </div>
-
-    <div class="account-item" data-acc="농협 707011-52-060370 조석정">
-      <div class="acc-info">
-        <span class="acc-name">혼주 조석정</span>
-        <span class="acc-no">농협 707011‑52‑060370</span>
-      </div>
-      <div class="btn-wrap">
-        <a class="icon-btn phone" href="tel:01095429207" aria-label="조석정 혼주에게 전화">전화하기</a>
-        <button class="icon-btn copy-btn"
-                data-acc="농협 707011-52-060370 조석정">계좌복사</button>
-      </div>
-    </div>
-
-    <div class="account-item" data-acc="농협 352-1751-4081-23 오민열">
-      <div class="acc-info">
-        <span class="acc-name">신랑 오민열</span>
-        <span class="acc-no">농협 352‑1751‑4081‑23</span>
-      </div>
-      <div class="btn-wrap">
-        <a class="icon-btn phone" href="tel:01042109207" aria-label="신랑 오민열에게 전화">전화하기</a>
-        <button class="icon-btn copy-btn"
-                data-acc="농협 352-1751-4081-23 오민열">계좌복사</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- ─── 신부측 ───────────────────────────────────── -->
-  <div class="account-group">
-    <h3>👰‍♀️ 신부측</h3>
-
-    <div class="account-item" data-acc="농협 751106-52-031094 김경일">
-      <div class="acc-info">
-        <span class="acc-name">혼주 김경일</span>
-        <span class="acc-no">농협 751106‑52‑031094</span>
-      </div>
-      <div class="btn-wrap">
-        <a class="icon-btn phone" href="tel:01090029061" aria-label="김경일 혼주에게 전화">전화하기</a>
-        <button class="icon-btn copy-btn"
-                data-acc="농협 751106-52-031094 김경일">계좌복사</button>
-      </div>
-    </div>
-
-    <div class="account-item" data-acc="농협 789-12-233931 고현수">
-      <div class="acc-info">
-        <span class="acc-name">혼주 고현수</span>
-        <span class="acc-no">농협 789‑12‑233931</span>
-      </div>
-      <div class="btn-wrap">
-        <a class="icon-btn phone" href="tel:01030809061" aria-label="고현수 혼주에게 전화">전화하기</a>
-        <button class="icon-btn copy-btn"
-                data-acc="농협 789-12-233931 고현수">계좌복사</button>
-      </div>
-    </div>
-
-    <div class="account-item" data-acc="토스뱅크 1000-1764-2669 김효정">
-      <div class="acc-info">
-        <span class="acc-name">신부 김효정</span>
-        <span class="acc-no">토스뱅크 1000‑1764‑2669</span>
-      </div>
-      <div class="btn-wrap">
-        <a class="icon-btn phone" href="tel:01074009061" aria-label="신부 김효정에게 전화">전화하기</a>
-        <button class="icon-btn copy-btn"
-                data-acc="토스뱅크 1000-1764-2669 김효정">계좌복사</button>
-      </div>
+  <div class="calendar-card">
+    <div class="cal-title">2025년 9월</div>
+    <div class="cal-grid">
+      <span class="cal-dow">일</span><span class="cal-dow">월</span><span class="cal-dow">화</span>
+      <span class="cal-dow">수</span><span class="cal-dow">목</span><span class="cal-dow">금</span><span class="cal-dow">토</span>
+      <span class="cal-blank"></span>
+      <span class="cal-day">1</span><span class="cal-day">2</span><span class="cal-day">3</span><span class="cal-day">4</span><span class="cal-day">5</span><span class="cal-day">6</span>
+      <span class="cal-day">7</span><span class="cal-day">8</span><span class="cal-day">9</span><span class="cal-day">10</span><span class="cal-day">11</span><span class="cal-day">12</span><span class="cal-day">13</span>
+      <span class="cal-day">14</span><span class="cal-day">15</span><span class="cal-day">16</span><span class="cal-day">17</span><span class="cal-day">18</span><span class="cal-day">19</span><span class="cal-day highlight">20</span>
+      <span class="cal-day">21</span><span class="cal-day">22</span><span class="cal-day">23</span><span class="cal-day">24</span><span class="cal-day">25</span><span class="cal-day">26</span><span class="cal-day">27</span>
+      <span class="cal-day">28</span><span class="cal-day">29</span><span class="cal-day">30</span>
     </div>
   </div>
 </section>
 
-<!--------------- LOCATION --------------->
-<section>
-  <h2>오시는 길</h2>
-
-  <!-- 카카오 약도 컨테이너 -->
-  <div id="daumRoughmapContainer1753199064120"
-       class="root_daum_roughmap root_daum_roughmap_landing map-rough"></div>
-
-  <!-- 지도 바로열기 버튼은 그대로 유지 (선택) -->
-  <div class="map-btn-wrap">
-    <a href="https://map.kakao.com/link/map/528031607" target="_blank" class="map-btn">카카오맵</a>
-    <a href="https://naver.me/5T4W6EiX" target="_blank" class="map-btn">네이버지도</a>
-  </div>
-</section>
-
-<!--------------- GALLERY --------------->
 <section>
   <h2>사진첩</h2>
   <div class="gallery-grid">
-    <img src="https://lh3.googleusercontent.com/d/1nVgmCITzvmpeefozdw576qrQjvLELGpa=w1600" onclick="openGallery(this, 0)">
-    <img src="https://lh3.googleusercontent.com/d/1BUAm2oisFmER5Xy6PYZib551OvEiQUVT=w1600" onclick="openGallery(this, 1)">
-    <img src="https://lh3.googleusercontent.com/d/1dQ9HxUvAp6axs-tlLsEDiynXIZ-k0KkG=w1600" onclick="openGallery(this, 2)">
-    <img src="https://lh3.googleusercontent.com/d/14omNAkA2ZF1trecCECUWcvhi0atWigPb=w1600" onclick="openGallery(this, 3)">
-    <img src="https://lh3.googleusercontent.com/d/1L_2FLUpSgn0cGV_ttnsHuxuu7t1NhtqH=w1600" onclick="openGallery(this, 4)">
-    <img src="https://lh3.googleusercontent.com/d/1-ANhkTPA8Ljb6oodDAc01NSdJWE_WWUt=w1600" onclick="openGallery(this, 5)">
-    <img src="https://lh3.googleusercontent.com/d/1oKI6fvBP7uxoeSCGFQHadMl3SpyM2lDw=w1600" onclick="openGallery(this, 6)">
-    <img src="https://lh3.googleusercontent.com/d/1blbWmLOPTeLXO3F6zT2OL-CAxpCsgxbG=w1600" onclick="openGallery(this, 7)">
+    <img src="images/gallery-01.jpg" alt="갤러리 사진 1" onclick="openGallery(this, 0)">
+    <img src="images/gallery-02.jpg" alt="갤러리 사진 2" onclick="openGallery(this, 1)">
+    <img src="images/gallery-03.jpg" alt="갤러리 사진 3" onclick="openGallery(this, 2)">
+    <img src="images/gallery-04.jpg" alt="갤러리 사진 4" onclick="openGallery(this, 3)">
+    <img src="images/gallery-05.jpg" alt="갤러리 사진 5" onclick="openGallery(this, 4)">
+    <img src="images/gallery-06.jpg" alt="갤러리 사진 6" onclick="openGallery(this, 5)">
+    <img src="images/gallery-07.jpg" alt="갤러리 사진 7" onclick="openGallery(this, 6)">
+    <img src="images/gallery-08.jpg" alt="갤러리 사진 8" onclick="openGallery(this, 7)">
   </div>
 </section>
 
@@ -182,76 +96,105 @@
   </div>
 </div>
 
-<!-- ▼ INVITATION 다음 원하는 위치에 삽입 -->
-<section id="d-day">
-  <h2>D‑DAY</h2>
-  <p id="dText">Loading…</p>
-
-<!-- 2025 SEPTEMBER 달력 (CSS Grid 버전) -->
-<div class="calendar-card">
-  <div class="cal-title">2025년&nbsp;9월</div>
-
-  <div class="cal-grid">
-    <!-- 요일 헤더 -->
-    <span class="cal-dow">일</span><span class="cal-dow">월</span><span class="cal-dow">화</span>
-    <span class="cal-dow">수</span><span class="cal-dow">목</span><span class="cal-dow">금</span><span class="cal-dow">토</span>
-
-    <!-- 9월 1일은 월요일 ⇒ 앞쪽 빈셀 1칸 -->
-    <span class="cal-blank"></span>
-    <!-- 날짜 1~30 -->
-    <span class="cal-day">1</span><span class="cal-day">2</span><span class="cal-day">3</span><span class="cal-day">4</span><span class="cal-day">5</span><span class="cal-day">6</span>
-    <span class="cal-day">7</span><span class="cal-day">8</span><span class="cal-day">9</span><span class="cal-day">10</span><span class="cal-day">11</span><span class="cal-day">12</span><span class="cal-day">13</span>
-    <span class="cal-day">14</span><span class="cal-day">15</span><span class="cal-day">16</span><span class="cal-day">17</span><span class="cal-day">18</span><span class="cal-day">19</span><span class="cal-day highlight">20</span>
-    <span class="cal-day">21</span><span class="cal-day">22</span><span class="cal-day">23</span><span class="cal-day">24</span><span class="cal-day">25</span><span class="cal-day">26</span><span class="cal-day">27</span>
-    <span class="cal-day">28</span><span class="cal-day">29</span><span class="cal-day">30</span>
+<section>
+  <h2>오시는 길</h2>
+  <div id="daumRoughmapContainer1753199064120" class="root_daum_roughmap root_daum_roughmap_landing map-rough"></div>
+  <div class="map-btn-wrap">
+    <a href="https://map.kakao.com/link/map/528031607" target="_blank" class="map-btn">카카오맵</a>
+    <a href="https://naver.me/5T4W6EiX" target="_blank" class="map-btn">네이버지도</a>
   </div>
-</div>
-<!-- ============= ▼ 기존 퍼즐 섹션 (수정됨) ▼ ============== -->
-<section id="puzzle">
-  <p class="puzzle-subtitle">
-    SPECIAL&nbsp;GAME
-  </p>
-  <h2>💞 사랑의 퍼즐을 맞춰보세요</h2>
-  <p class="puzzle-description">
-    퍼즐을 맞춰 민열이와 효정이가 만나게 해주세요!
-  </p>
+</section>
 
+<section id="puzzle">
+  <p class="puzzle-subtitle">SPECIAL GAME</p>
+  <h2>💞 사랑의 퍼즐을 맞춰보세요</h2>
+  <p class="puzzle-description">퍼즐을 맞춰 민열이와 효정이가 만나게 해주세요!</p>
   <div class="puzzle-container">
     <canvas id="puzzleCanvas"></canvas>
-    <button onclick="shufflePuzzle()" class="shuffle-btn">
-      다시 섞기
-    </button>
-    
+    <button onclick="shufflePuzzle()" class="shuffle-btn">다시 섞기</button>
     <a href="https://myoh25.github.io/hidden_game/" target="_blank" class="special-event-btn">
-        <span class="btn-line-1">💌 퍼즐 고수를 위한 초대장 ✨</span>
-        <span class="btn-line-2">(방명록도 남길 수 있어요! ✍️)</span>
+      <span class="btn-line-1">💌 퍼즐 고수를 위한 초대장 ✨</span>
+      <span class="btn-line-2">(방명록도 남길 수 있어요! ✍️)</span>
     </a>
-
     <p id="message"></p>
   </div>
 </section>
 
-<!-- ▼ 퍼즐 완료 시 등장할 특전 사진 (유지) -->
 <div id="rewardWrap" class="reward">
   <img src="https://cdn.jsdelivr.net/gh/myoh25/1/puzzle-special03.png" alt="특전 사진" class="reward__img">
   <div class="wave wave--back"></div>
   <div class="wave wave--front"></div>
 </div>
-<!-- ▼ ① BGM 오디오 -->
-<audio id="bgm"
-       src="https://cdn.jsdelivr.net/gh/myoh25/1/bgm.mp3"
-       preload="auto" loop></audio>
-<!-- ▼ 플로팅 FAB 컨테이너 -->
-<div id="fab" class="fab">
-  <!-- 메인 토글 버튼 (☰ 아이콘 예시) -->
-  <button id="fabMain" class="fab-main">설정</button>
 
-  <!-- 숨겨질 액션 버튼들 -->
-  <button id="saveCard"  class="fab-action">저장</button>
-  <button id="shareUrl"  class="fab-action">공유</button>
+<section id="account">
+  <h2>마음 전하실 곳</h2>
+  <div class="account-group">
+    <h3>🤵‍♂️ 신랑측</h3>
+    <div class="account-item">
+      <div class="acc-info"><span class="acc-name">혼주 오상봉</span><span class="acc-no">국민 607‑24‑0021‑571</span></div>
+      <div class="btn-wrap">
+        <a class="icon-btn phone" href="tel:01085969207" aria-label="오상봉 혼주에게 전화">전화하기</a>
+        <button class="icon-btn copy-btn" data-acc="국민 607-24-0021-571 오상봉">계좌복사</button>
+      </div>
+    </div>
+    <div class="account-item">
+      <div class="acc-info"><span class="acc-name">혼주 조석정</span><span class="acc-no">농협 707011‑52‑060370</span></div>
+      <div class="btn-wrap">
+        <a class="icon-btn phone" href="tel:01095429207" aria-label="조석정 혼주에게 전화">전화하기</a>
+        <button class="icon-btn copy-btn" data-acc="농협 707011-52-060370 조석정">계좌복사</button>
+      </div>
+    </div>
+    <div class="account-item">
+      <div class="acc-info"><span class="acc-name">신랑 오민열</span><span class="acc-no">농협 352‑1751‑4081‑23</span></div>
+      <div class="btn-wrap">
+        <a class="icon-btn phone" href="tel:01042109207" aria-label="신랑 오민열에게 전화">전화하기</a>
+        <button class="icon-btn copy-btn" data-acc="농협 352-1751-4081-23 오민열">계좌복사</button>
+      </div>
+    </div>
+  </div>
+  <div class="account-group">
+    <h3>👰‍♀️ 신부측</h3>
+    <div class="account-item">
+      <div class="acc-info"><span class="acc-name">혼주 김경일</span><span class="acc-no">농협 751106‑52‑031094</span></div>
+      <div class="btn-wrap">
+        <a class="icon-btn phone" href="tel:01090029061" aria-label="김경일 혼주에게 전화">전화하기</a>
+        <button class="icon-btn copy-btn" data-acc="농협 751106-52-031094 김경일">계좌복사</button>
+      </div>
+    </div>
+    <div class="account-item">
+      <div class="acc-info"><span class="acc-name">혼주 고현수</span><span class="acc-no">농협 789‑12‑233931</span></div>
+      <div class="btn-wrap">
+        <a class="icon-btn phone" href="tel:01030809061" aria-label="고현수 혼주에게 전화">전화하기</a>
+        <button class="icon-btn copy-btn" data-acc="농협 789-12-233931 고현수">계좌복사</button>
+      </div>
+    </div>
+    <div class="account-item">
+      <div class="acc-info"><span class="acc-name">신부 김효정</span><span class="acc-no">토스뱅크 1000‑1764‑2669</span></div>
+      <div class="btn-wrap">
+        <a class="icon-btn phone" href="tel:01074009061" aria-label="신부 김효정에게 전화">전화하기</a>
+        <button class="icon-btn copy-btn" data-acc="토스뱅크 1000-1764-2669 김효정">계좌복사</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<audio id="bgm" src="https://cdn.jsdelivr.net/gh/myoh25/1/bgm.mp3" preload="auto" loop></audio>
+
+<div id="fab" class="fab">
+  <button id="fabMain" class="fab-main">설정</button>
+  <button id="saveCard" class="fab-action">저장</button>
+  <button id="shareUrl" class="fab-action">공유</button>
   <button id="bgmToggle" class="fab-action">음악<br>켜기</button>
 </div>
-<footer><p>Made with love by 민열 &amp; 효정</p></footer>
-<?!= include('javascript'); ?>
+
+<footer>
+  <p>Made with love by 민열 & 효정</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js" charset="UTF-8"></script>
+<script src="script.js"></script>
+
 </body>
 </html>
