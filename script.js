@@ -398,3 +398,44 @@ window.addEventListener('popstate', function(event) {
 });
 
 // ===== 갤러리 스크립트 끝 =====
+/* ==================== [추가] 스크롤 버튼 로직 ==================== */
+
+// DOM 로드 후에 실행되도록 보장
+document.addEventListener('DOMContentLoaded', () => {
+  
+  // HTML에서 버튼 요소들을 찾습니다.
+  const scrollTopBtn = document.getElementById('scrollTopBtn');
+  const scrollBottomBtn = document.getElementById('scrollBottomBtn');
+
+  // 버튼이 페이지에 존재하는지 확인합니다.
+  if (!scrollTopBtn || !scrollBottomBtn) {
+    return;
+  }
+
+  // 페이지 스크롤 이벤트를 감지합니다.
+  window.addEventListener('scroll', () => {
+    // 만약 사용자가 조금이라도 스크롤을 내렸다면
+    if (window.scrollY > 200) {
+      scrollTopBtn.style.display = 'flex'; // '맨 위로' 버튼을 보여줍니다.
+    } else {
+      scrollTopBtn.style.display = 'none'; // '맨 위로' 버튼을 숨깁니다.
+    }
+  });
+
+  // '맨 위로' 버튼 클릭 시
+  scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0, // 페이지의 가장 위로
+      behavior: 'smooth' // 부드럽게 스크롤
+    });
+  });
+
+  // '맨 아래로' 버튼 클릭 시
+  scrollBottomBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: document.body.scrollHeight, // 페이지의 가장 아래로
+      behavior: 'smooth' // 부드럽게 스크롤
+    });
+  });
+
+});
